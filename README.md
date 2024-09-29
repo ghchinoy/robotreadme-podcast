@@ -107,7 +107,11 @@ gcloud eventarc triggers list --location=${REGION}
 
 ## Create an event by adding to the GCS bucket
 
+An example audio file created by [Fabulae](https://github.com/ghchinoy/fabulae) is included in the `assets` directory.
 
+```
+gsutil cp assets/podcast-AudioLMaLanguageModelingApproachtoAudioGeneration_20240928.011505.24.mp3 gs://$PROJECT_ID-$BUCKET_SUFFIX
+```
 
 
 
