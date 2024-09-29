@@ -1,0 +1,16 @@
+---
+title: "Google Cloud Platform Release Notes 2024 09 05"
+date: 2024-09-06T06:00:12-06:00
+podcast:
+    mp3: "https://storage.googleapis.com/robot-readme/gcp/GCP_Release_Notes_2024_09_05_en-US.mp3"
+    duration: "00:04:12.84"
+    size: 2022720
+---
+[Release notes for September 05, 2024](https://cloud.google.com/release-notes#September_05_2024).
+
+16 release notes across 1 products.
+
+* 
+
+
+[cloud.google.com/release-notes#September_05_2024](https://cloud.google.com/release-notes#September_05_2024)

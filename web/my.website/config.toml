@@ -1,0 +1,76 @@
+baseURL = "https://www.robotread.me/"
+languageCode = "en-us"
+title = "robotread.me"
+
+theme = "devise"
+relativeURLs = true
+enableEmoji = true
+googleAnalytics = "G-MRERDQ54D8"
+enableRobotsTXT = true
+copyright = "&copy; 2020, Robot Read Me"
+
+# main menu
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    title = "About"
+    url = "/about/"
+    weight = -110
+  [[menu.main]]
+    identifier = "posts"
+    name = "Blog"
+    title = "Blog"
+    url = "/posts/"
+    weight = -100
+  [[menu.main]]
+    identifier = "podcast"
+    name = "Podcast"
+    title = "Podcast"
+    url = "/podcast/"
+    weight = -90
+
+[author]
+  email = "producers@robotread.me"
+  name = "robot readme producers"
+# config features
+[params]
+  description = "robotread.me reads release notes"
+  header_title = "robot read me"
+  header_subtitle = "reading release notes so you don't have to"
+  home_image = "/images/robotemoji.png"
+  header_image_width = 512
+  header_image_height = 512
+  [[params.social]]
+    alt = "twitter"
+    fa_icon = "fab fa-twitter fa-1x"
+    href = "https://twitter.com/robot_readme"
+  [[params.social]]
+    alt = "rss feed"
+    fa_icon = "fas fa-rss fa-1x"
+    href = "/podcast/index.xml"
+  [[params.social]]
+    alt = "google podcasts"
+    fa_icon = "fab icon-googlepodcasts fa-1x"
+    href = "https://podcasts.google.com/feed/aHR0cHM6Ly93d3cucm9ib3RyZWFkLm1lL3BvZGNhc3QvaW5kZXgueG1s?sa=X&ved=0CAMQ4aUDahcKEwj4jJSAlPTsAhUAAAAAHQAAAAAQBw"
+  [[params.social]]
+    alt = "spotify"
+    fa_icon ="fab fa-spotify fa-1x"
+    href = "https://open.spotify.com/show/3JijfFzoz1bqDp7HwFwRQ3"
+  [[params.social]]
+    alt = "apple podcasts"
+    fa_icon = "fas fa-podcast fa-1x"
+    href = "https://podcasts.apple.com/us/podcast/robotread-me/id1539356192"
+  [params.podcast]
+    title = "robotread.me"
+    description = "robotread.me reads release notes so you don't have to"
+    image = "robotemoji_1400x1400.png"
+    preload = "auto"
+    lang = "en-us"
+    [params.podcast.category]
+      name = "Technology"
+    [params.podcast.owner]
+      name = "robot readme producers"
+      email = "producers@robotread.me"  
+
+about_audio = "/audio/about.mp3"

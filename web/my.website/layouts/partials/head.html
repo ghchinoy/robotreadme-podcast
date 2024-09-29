@@ -1,0 +1,53 @@
+<head>
+    <title>{{ .Title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+
+    {{/* preloads for lighthouse performance */}}
+    <link rel="preload" href="/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/googlepodcasts/style.css" as="style" >
+
+    {{/* Adds complete override capability */}}
+    {{ $overrideTemplate := resources.Get "sass/override.scss" }}
+    {{ $override := $overrideTemplate | resources.ExecuteAsTemplate "css/theme.scss" . | toCSS | minify }}
+    <link rel="stylesheet" href="{{ $override.RelPermalink }}">
+
+    {{/* Adds custom styles capability */}}
+    {{ $customTemplate := resources.Get "sass/custom.scss" }}
+    {{ if $customTemplate }}
+    {{ $custom := $customTemplate | resources.ExecuteAsTemplate "css/custom.scss" . | toCSS | minify }}
+    <link rel="stylesheet" href="{{ $custom.RelPermalink }}">
+    {{ end }}
+
+    {{/* Adds podcast reference link */}}
+    <link rel="alternate" type="application/rss+xml" title="{{ .Site.Params.Podcast.Description }}"
+          href="https://www.robotread.me/podcast/index.xml"/>
+
+    {{/* comments out internal GA template */}}
+    {{/* template "_internal/google_analytics.html" . */}}
+
+    {{/* Adds latest Google Analytics G4 tag */}}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ .Site.GoogleAnalytics }}');
+    </script>
+
+    {{/* Adds Tag manager */}}
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','{{ .Site.GoogleAnalytics }}');</script>
+    <!-- End Google Tag Manager -->
+
+    {{/* adds Google Podcast Icon Font */}}
+    <link rel="stylesheet" href="/googlepodcasts/style.css">
+</head>

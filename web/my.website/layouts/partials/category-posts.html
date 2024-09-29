@@ -1,0 +1,47 @@
+<div class="pl-sm-4 ml-sm-5 pt-2">
+    <div class="row">{{- partial "podcast_badges.html" . -}}</div>
+    <div class="row">
+        <div class="col-12">
+            {{ $recent := 7 }}
+            {{ if isset .Site.Params "recent_posts" }}
+                {{ $recent = .Site.Params.recent_posts }}
+            {{ end }}
+            <div class="pb-3">
+                <div class="not-h5"><span class="badge category">Recent</span></div>
+                <ul class="list-unstyled">
+                    {{ range first $recent (where .Site.RegularPages "Type" "in" site.Params.mainSections) }}
+                        <li>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-3">{{ .Date.Format "Jan 2 2006" }}</div>
+                                    <div class="col-sm"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+                                </div>
+                                <div class="row justify-content-md-center">
+                                    <div class="col-sm-6">{{- partial "podcast.html" . -}}</div>
+                                </div>
+                            </div>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+
+            {{ range $key, $taxonomy := .Site.Taxonomies.categories.Alphabetical }}
+                <div class="pb-3">
+                    <h5>
+                    <span class="badge category text-capitalize">
+                        {{ .Name | humanize }}
+                    </span>
+                    </h5>
+                    <ul class="list-unstyled">
+                        {{ range $taxonomy.Pages }}
+                            <li>
+                                {{ .Date.Format "Jan 2 2006" }}
+                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
