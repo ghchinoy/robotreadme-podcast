@@ -2,7 +2,7 @@
 title: "Podcast feed available"
 date: 2020-11-02T18:44:40-07:00
 draft: false
-description: "Podcast available via rss feed, Apple Podcasts, Spotify, Google Podcasts"
+description: "Podcast available via rss feed, Apple Podcasts, and Spotify"
 ---
 
 The Google Cloud Platform Release notes podcast feed is now available!
@@ -18,12 +18,6 @@ Our podcast is now available on Apple Podcasts.
 Our podcast is now available on Spotify.
 
 [![spotify](/images/spotify/SVG/spotify-podcast-badge-wht-blk-165x40.svg)](https://open.spotify.com/show/3JijfFzoz1bqDp7HwFwRQ3)
-
-## Google Podcasts
-
-Our podcast is now available on Google Podcasts.
-
-[![google podcast](/images/EN_Google_Podcasts_Badge.svg)](https://podcasts.google.com/feed/aHR0cHM6Ly93d3cucm9ib3RyZWFkLm1lL3BvZGNhc3QvaW5kZXgueG1s)
 
 
 ## Direct RSS

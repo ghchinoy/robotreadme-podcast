@@ -1,0 +1,3 @@
+[submodule "web/my.website/themes/devise"]
+	path = web/my.website/themes/devise
+	url = https://github.com/austingebauer/devise.git

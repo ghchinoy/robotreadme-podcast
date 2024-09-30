@@ -4,7 +4,7 @@
     <body>
         {{/* Google Tag Manager*/}}
         <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ .Site.GoogleAnalytics }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ .Site.Config.Services.GoogleAnalytics.ID }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
         <div id="content" class="mx-auto">
             {{- partial "header.html" . -}}  

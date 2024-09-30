@@ -14,7 +14,6 @@ The current features are:
 * Audio content creation for a podcast. Specifically, a GCP Release Notes podcast.
 * A podcast feed for the [GCP Release Notes](https://cloud.google.com/release-notes). For more info see the post entitled "[Podcast Feed Available](/posts/podcast_available/)".
 
-  [![google podcast](/images/EN_Google_Podcasts_Badge.svg)](https://podcasts.google.com/feed/aHR0cHM6Ly93d3cucm9ib3RyZWFkLm1lL3BvZGNhc3QvaW5kZXgueG1s)
   [![spotify](/images/spotify/SVG/spotify-podcast-badge-wht-blk-165x40.svg)](https://open.spotify.com/show/3JijfFzoz1bqDp7HwFwRQ3)
   [![apple podcasts](/images/US_UK_Apple_Podcasts_Listen_Badge_RGB.svg)](https://podcasts.apple.com/us/podcast/robotread-me/id1539356192)
 

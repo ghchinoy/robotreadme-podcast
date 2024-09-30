@@ -5,9 +5,13 @@ title = "robotread.me"
 theme = "devise"
 relativeURLs = true
 enableEmoji = true
-googleAnalytics = "G-MRERDQ54D8"
 enableRobotsTXT = true
 copyright = "&copy; 2020, Robot Read Me"
+
+# services
+[services]
+  [services.googleAnalytics]
+      id = 'G-MRERDQ54D8'
 
 # main menu
 [menu]
@@ -49,10 +53,10 @@ copyright = "&copy; 2020, Robot Read Me"
     alt = "rss feed"
     fa_icon = "fas fa-rss fa-1x"
     href = "/podcast/index.xml"
-  [[params.social]]
-    alt = "google podcasts"
-    fa_icon = "fab icon-googlepodcasts fa-1x"
-    href = "https://podcasts.google.com/feed/aHR0cHM6Ly93d3cucm9ib3RyZWFkLm1lL3BvZGNhc3QvaW5kZXgueG1s?sa=X&ved=0CAMQ4aUDahcKEwj4jJSAlPTsAhUAAAAAHQAAAAAQBw"
+  #[[params.social]]
+  #  alt = "google podcasts"
+  #  fa_icon = "fab icon-googlepodcasts fa-1x"
+  #  href = "https://podcasts.google.com/feed/aHR0cHM6Ly93d3cucm9ib3RyZWFkLm1lL3BvZGNhc3QvaW5kZXgueG1s?sa=X&ved=0CAMQ4aUDahcKEwj4jJSAlPTsAhUAAAAAHQAAAAAQBw"
   [[params.social]]
     alt = "spotify"
     fa_icon ="fab fa-spotify fa-1x"
